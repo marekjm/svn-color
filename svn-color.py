@@ -10,6 +10,11 @@
  Author: Phil Christensen (http://bubblehouse.org)
  Contact: phil@bubblehouse.org
  Date: February 22, 2010
+
+ Additional modifications:
+ Author: Marek Marecki (http://marecki.me)
+ Contact: marekjm@ozro.pw
+ Date: December 15, 2017
 """
 
 import sys, subprocess
