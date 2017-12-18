@@ -1,11 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
  Author: Saophalkun Ponlu (http://phalkunz.com)
  Contact: phalkunz@gmail.com
  Date: May 23, 2009
  Modified: June 15, 2009
- 
+
  Additional modifications:
  Author: Phil Christensen (http://bubblehouse.org)
  Contact: phil@bubblehouse.org
