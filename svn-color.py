@@ -193,7 +193,7 @@ if __name__ == '__main__':
     if subcommand in colorizedSubcommands and (sys.stdout.isatty() or os.environ.get('SVN_COLOR', 'always')):
         task = subprocess.Popen(command, stdout=subprocess.PIPE)
         while True:
-            line = task.stdout.readline()
+            line = task.stdout.readline().decode('utf-8')
             if not line:
                 break
             sys.stdout.write(colorize(line))
