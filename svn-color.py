@@ -74,7 +74,7 @@ class CommitedRevision(Matcher):
         return 'Commited revision {}.\n'.format(revision)
 
 class StatusModified(Matcher):
-    starts_with_regex = re.compile('^M\b')
+    starts_with_regex = re.compile(r'^M\b')
     color = '32'
 
 class LogModified(Matcher):
@@ -94,7 +94,7 @@ class Untracked(Matcher):
     color = '37'
 
 class StatusAdded(Matcher):
-    starts_with_regex = re.compile('^A\b')
+    starts_with_regex = re.compile(r'^A\b')
     color = '32'
 
 class LogAdded(Matcher):
@@ -104,11 +104,11 @@ class LogAdded(Matcher):
         return self.apply_color('38;5;82;1', line[:4]) + self.apply_color('97', line[4:])
 
 class StatusX(Matcher):
-    starts_with_regex = re.compile('^X\b')
+    starts_with_regex = re.compile(r'^X\b')
     color = '31'
 
 class StatusC(Matcher):
-    starts_with_regex = re.compile('^C\b')
+    starts_with_regex = re.compile(r'^C\b')
     color = '30;41'
 
 class DiffRemoved(Matcher):
@@ -119,15 +119,15 @@ class DiffRemoved(Matcher):
         return line.startswith('-') and not line.startswith('-----')
 
 class StatusD(Matcher):
-    starts_with_regex = re.compile('^D\b')
+    starts_with_regex = re.compile(r'^D\b')
     color = '31;1'  # bold red
 
 class StatusU(Matcher):
-    starts_with_regex = re.compile('^U\b')
+    starts_with_regex = re.compile(r'^U\b')
     color = '32;1'  # bold green
 
 class StatusG(Matcher):
-    starts_with_regex = re.compile('^G\b')
+    starts_with_regex = re.compile(r'^G\b')
     color = '32;1'  # bold green
 
 class DiffAdded(Matcher):
@@ -139,7 +139,7 @@ class DiffMarker(Matcher):
     color = '38;5;75'
 
 class RevisionHeader(Matcher):
-    matching_regex = re.compile('^(r\d+) \| (.*?) \| (.*?) \| (\d+ lines?)$')
+    matching_regex = re.compile(r'^(r\d+) \| (.*?) \| (.*?) \| (\d+ lines?)$')
     color = '38;5;202'
 
     def match(self, line):
