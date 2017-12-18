@@ -185,7 +185,7 @@ def colorize(line):
 if __name__ == '__main__':
     command = sys.argv
     command[0] = '/usr/bin/svn'
-    
+
     if len(command) > 1:
         subcommand = (command[1], '')[len(command) < 2]
     else:
