@@ -17,7 +17,7 @@
  Date: December 15, 2017
 """
 
-import sys, subprocess
+import os, sys, subprocess
 
 colorizedSubcommands = (
     'status',
@@ -58,7 +58,7 @@ if __name__ == '__main__':
         subcommand = (command[1], '')[len(command) < 2]
     else:
         subcommand = ''
-    if subcommand in colorizedSubcommands and sys.stdout.isatty():
+    if subcommand in colorizedSubcommands and (sys.stdout.isatty() or os.environ.get('SVN_COLOR', 'always')):
         task = subprocess.Popen(command, stdout=subprocess.PIPE)
         while True:
             line = task.stdout.readline()
