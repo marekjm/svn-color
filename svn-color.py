@@ -15,13 +15,9 @@
 import sys, subprocess
 
 colorizedSubcommands = (
-	'status',
-	'stat',
-	'st',
-	'add',
-	'remove',
-	'diff',
-	'di',
+   'log',
+   'update',
+   'up',
 )
 
 statusColors = {
